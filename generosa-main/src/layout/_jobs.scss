@@ -1,0 +1,29 @@
+@import '../abstract/typograph';
+
+.jobs{
+    @include defaultSizesSection();
+    @include flexColumn();
+    gap: 6rem;
+    align-items: center;
+    padding: 2rem 0;
+    .job-list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 0 10px;
+
+        .job-item{
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .jobs{
+        .job-list{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

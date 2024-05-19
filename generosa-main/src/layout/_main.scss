@@ -1,0 +1,39 @@
+@import '../components/header';
+@import '../abstract/typograph';
+
+main{
+    @include defaultSizesSection();
+    background-image: url('../assets/imgs/Experieworking-tattoo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0;
+    padding-top: 8rem;
+    
+    .main-content{
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        .main-title{
+            font-size: var(--size-titleMain);
+            font-weight: var(--font-bold);
+            max-width: 720px;
+        }
+        .main-subContent{
+            @include flexColumn;
+            align-items: flex-start;
+            gap: 2rem;
+            max-width: 400px;
+            color: var(--color-white_low);
+        }
+    }
+
+    @media (max-width:426px) {
+        background-position: right;
+        .main-content{
+            .main-title{
+                font-size: var(--size-titleMain_mobile);
+            }
+        }
+    }
+}

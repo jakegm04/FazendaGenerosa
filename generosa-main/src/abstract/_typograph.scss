@@ -1,0 +1,83 @@
+
+:root{
+    --size-titleMain: 64px;
+    --size-titleMain_mobile: 32px;
+    --size-titleSection: 48px;
+    --size-bigTitleSection: 128px;
+
+    --size-small: 12px;
+    --size-normal: 16px;
+    --size-medium: 24px;
+    --size-larger: 48px;
+    --size-big: 78px;
+    --size-giant: 128px;
+
+    --font-regular: 400;
+    --font-semiBold: 500;  
+    --font-bold: 700;
+}
+
+@mixin titleStroke-section{
+    font-size: var(--size-giant);
+    font-weight: bold;
+    color: var(--color-black);
+    text-shadow: 
+            -.5px -.5px 0px var(--color-white_light), 
+            -.5px .5px 0px var(--color-white_light),  
+            .5px -.5px 0px var(--color-white_light),  
+            .5px 0px 0px var(--color-white_light);
+
+    @media (max-width:768px) {
+        font-size: var(--size-big);
+    }
+    @media (max-width:426px) {
+        font-size: var(--size-larger);
+    }
+}
+
+@mixin boxTitleSection{
+    position: relative;
+        width: 100%;
+        min-height: 30vh;
+        height: auto;
+
+    .big-title{
+        @include titleStroke-section();
+        position: absolute;
+        bottom: -1.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (max-width:768px) {
+            bottom: -1rem;
+        }        
+        @media (max-width:426px) {
+            bottom: -.4rem;
+        }        
+    }
+    .title-section{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: var(--size-larger);
+        
+        @media (max-width:768px) {
+            font-size: 24px;
+        }        
+        @media (max-width:426px) {
+            font-size: var(--size-normal);
+        }        
+    }
+    
+    @media (max-width:426px) {
+        min-height: 20vh;
+    }        
+}
+
+// título de seção global
+
+.box-title{
+    @include boxTitleSection();
+
+}

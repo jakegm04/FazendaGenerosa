@@ -792,6 +792,20 @@ footer .footer-img img{
 
 /* outro css pq to com preguiça de pegar parte por parte dele */
 
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+/*                  */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
 html {
@@ -1386,4 +1400,5 @@ section {
         font-size: 1.3rem;
         color: var(--color);
     }
-}
+} 
+

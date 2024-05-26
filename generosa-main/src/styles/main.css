@@ -646,7 +646,7 @@ main .main-content .main-subContent {
 .box-title .big-title {
   font-size: var(--size-giant);
   font-weight: bold;
-  color: var(--color-black);
+  color: #203c12;;
   text-shadow: -0.5px -0.5px 0px var(--color-white_light), -0.5px 0.5px 0px var(--color-white_light), 0.5px -0.5px 0px var(--color-white_light), 0.5px 0px 0px var(--color-white_light);
   position: absolute;
   bottom: -1.5rem;
